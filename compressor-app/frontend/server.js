@@ -6,6 +6,6 @@ const PORT = 5173;
 
 app.use(express.static(path.resolve(".")));
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Frontend running on http://localhost:${PORT}`);
 });
