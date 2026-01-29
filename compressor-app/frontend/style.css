@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Lato", sans-serif;
+}
+
+#app-heading {
+  color: #52347E;
+}
+
+body {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  background: #FBF4FB;
+  flex-direction: column;
+  justify-content: center;
+}
+
+select#type {
+  height: 30px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+input#files::file-selector-button {
+  height: 30px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #6C4EA1;
+  transition: background-color 0.3s;
+}
+input#files::file-selector-button:hover {
+  background-color: #52347E;
+}
+
+#upload-container {
+  display: none;
+}
+
+#upload-container.uploading {
+  display: block;
+}
+
+.card {
+  width: 60%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #dcc8ff;
+  border: 1px solid #6C4EA1;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-width: 1px;
+  font-size: medium;
+  border-radius: 4px;
+  background-color: #FFF;
+}
+button:hover {
+  background-color: #ebe0fe;
+}
+
+#progress {
+  display: none;
+  padding: 10px;
+  overflow: auto;
+  font-size: 12px;
+  margin-top: 15px;
+  min-height: 50px;
+  max-height: 300px;
+  background: #ebe0fe;
+  border: 1px solid #6C4EA1;
+}
+
+#progress.uploading {
+  display: block;
+}
+
+a#download {
+  display: none;
+  color: #52347E;
+  margin-top: 10px;
+}
+
+a#download.ready {
+  display: block;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TurboCompress⚡Fast Image & Video Compressor</title>
+    <meta name="description"
+      content="TurboCompress is a fast online image and video compressor. Compress media files instantly with real-time progress and batch ZIP download." />
+    <meta name="keywords"
+      content="image compressor, video compressor, compress jpg, compress mp4, media compression, TurboCompress" />
+    <meta name="author" content="TurboCompress" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+    <!-- Apple / mobile -->
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <!-- Open Graph (social preview) -->
+    <meta property="og:title" content="TurboCompress⚡Media Compressor" />
+    <meta property="og:description"
+      content="Fast web-based image & video compression with real-time progress and ZIP download." />
+    <meta property="og:image" content="assets/logo.png" />
+    <meta property="og:type" content="website" />
+    <!-- Theme color -->
+    <meta name="theme-color" content="#7c5cff" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <img src="assets/logo.png" height="80" />
+    <h1 id="app-heading">Image / Video Compressor</h1>
+
+    <div class="card">
+      <select id="type" onchange="updateAccept()">
+        <option value="image">Image Compress</option>
+        <option value="video">Video Compress</option>
+      </select>
+
+      <input type="file" id="files" multiple onchange="handleFileChange()" />
+
+      <div id="upload-container">
+        <button onclick="upload()">Upload & Compress</button>
+        <div id="progress"></div>
+      </div>
+
+      <a id="download">Download ZIP</a>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
